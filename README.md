@@ -2,18 +2,6 @@
 
 A minimal example for testing Daft Cloud.
 
-## Setup
+## What it does
 
-Initialize the project with Daft Cloud:
-
-```bash
-ev --profile=development init
-```
-
-This will create an `ev.toml` file with your project ID.
-
-## Run
-
-```bash
-ev --profile=development run script.py
-```
+Creates a simple DataFrame with names, ages, and cities, then adds a greeting column.

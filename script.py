@@ -2,18 +2,18 @@ import time
 
 
 def main():
-    # Burst: 100 logs quickly (tests volume handling)
+    # Burst: 10 logs quickly (tests volume handling)
     print("=== Starting burst phase ===")
-    for i in range(100):
+    for i in range(10):
         print(f"[BURST] Log message #{i+1}: Hello World variation {i+1}")
 
-    # Steady stream: 10 every 5 seconds for 1 minute (tests real-time streaming)
+    # Steady stream: 5 every 60 seconds for 5 minutes (tests real-time streaming)
     print("=== Starting steady phase ===")
-    for batch in range(12):  # 12 batches = 60 seconds
-        for i in range(10):
-            msg_num = 100 + (batch * 10) + i + 1
+    for batch in range(5):  # 5 batches = 5 minutes
+        for i in range(5):
+            msg_num = 10 + (batch * 5) + i + 1
             print(f"[STREAM] Log message #{msg_num}: Batch {batch+1}, item {i+1}")
-        time.sleep(5)
+        time.sleep(60)
 
     print("=== Done ===")
 

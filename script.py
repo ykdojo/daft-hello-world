@@ -13,7 +13,7 @@ def main():
         for i in range(5):
             msg_num = 10 + (batch * 5) + i + 1
             print(f"[STREAM] Log message #{msg_num}: Batch {batch+1}, item {i+1}")
-        time.sleep(60)
+        time.sleep(5)
 
     print("=== Done ===")
 
